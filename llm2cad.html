@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LLM2CAD — TRI UX</title>
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="nav-back" href="index.html">← Back to Portfolio</a>
+    <a href="index.html"><img src="assets/rse_logo.svg" alt="RSE Logo" style="height:28px;display:block;"></a>
+  </div>
+</nav>
+
+<div class="cs-hero" style="background: linear-gradient(135deg, #001820 0%, #002d38 100%);">
+  <div class="cs-hero-inner">
+    <div class="cs-hero-chips"><span class="badge badge-type">AI Tools</span><span class="badge badge-done">Completed</span><span class="badge badge-jira">TRI-43910</span></div>
+    <h1>LLM2CAD</h1>
+    <p class="cs-hero-desc">A tool bridging human creativity and precision engineering through AI-powered CAD generation, featuring an enhanced input form and CAD viewer experience.</p>
+    <div class="cs-hero-links"><a class="btn btn-primary" href="https://stage.cadgen.hcai.tri.global/" target="_blank">▶ Demo</a><a class="btn btn-outline" href="https://www.figma.com/design/essWDP90vFc7FJZlIRsDJU/LLM2CAD?node-id=0-1&t=2Uc5cQQzhtIGrDit-1" target="_blank">✦ Figma</a><a class="btn btn-outline" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-43910" target="_blank">⬡ Jira Epic</a></div>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="cs-sidebar">
+
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="overview" onclick="showTab('overview')">
+        Project Overview
+      </button>
+      <button class="tab-btn" data-tab="team" onclick="showTab('team')">
+        Team
+      </button>
+    </nav>
+
+    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Overview</h3><p>LLM2CAD bridges the gap between human creativity and precision engineering through AI-powered CAD generation. Users describe what they want in natural language and the tool produces CAD output.</p></div>
+<div class="tab-section"><h3>Design Focus</h3><ul><li>Intuitive natural language input form</li><li>Clear CAD viewer with exploration controls</li><li>Feedback loop between prompt and output</li></ul></div></div>
+    <div id="pane-team" class="tab-pane"><div class="tab-section">
+          <h3>Team</h3>
+          <ul class="team-list">
+            <li><span class="team-name">Adrien Cogny</span><span class="team-role">Infrastructure Engineer</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:a16ef30f-a116-4969-86b5-3ca04c51396f" target="_blank">Ayush Nema</a><span class="team-role">ML Engineer</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:d99b0a71-c9b3-48ae-8be6-e07f9f7895a6" target="_blank">Carla Bellido</a><span class="team-role">UX Designer</span></li>
+            <li><span class="team-name">Chris Fajardo</span><span class="team-role">Staff Software Engineer</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/5c9454eed30a312d4a176eed" target="_blank">David Berkowitz</a><span class="team-role">Director, Research Software Engineering</span></li>
+            <li><span class="team-name">Jonathan Li</span><span class="team-role">Software Engineer 4</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:44127336-33c4-493b-8f10-464f3016b6a2" target="_blank">Megan Peurach</a><span class="team-role">Program Manager</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/60cba7dcdeecef006a954b2f" target="_blank">Mike Puzon</a><span class="team-role">Staff Software Engineer</span></li>
+            <li><span class="team-name">Nadimpalli Varma</span><span class="team-role">Junior Engineer — UI</span></li>
+            <li><span class="team-name">Yan-Ying Chen</span><span class="team-role">Senior Research Scientist</span></li>
+          </ul>
+        </div>
+    </div></aside>
+
+  <!-- RIGHT CONTENT -->
+  <main class="cs-content">
+
+    <!-- Banner -->
+    <div class="cs-banner">
+      <img src="assets/BrochurePage.jpg" alt="LLM2CAD" style="width:100%;height:220px;object-fit:cover;object-position:top;border-radius:var(--radius);display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="media-placeholder banner-ph" style="display:none;">
+        <div class="ph-icon" style="font-size:1.8rem">🖼️</div>
+        <div class="ph-sub">BrochurePage.jpg not found</div>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Links</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+        <a class="deliverable-link" href="https://stage.cadgen.hcai.tri.global/" target="_blank">
+          <span class="deliverable-icon">▶</span>
+          <div><div class="deliverable-title">Live Staging Environment</div><div class="deliverable-sub">stage.cadgen.hcai.tri.global</div></div>
+        </a>
+        <a class="deliverable-link" href="https://www.figma.com/design/essWDP90vFc7FJZlIRsDJU/LLM2CAD?node-id=0-1&t=2Uc5cQQzhtIGrDit-1" target="_blank">
+          <span class="deliverable-icon">✦</span>
+          <div><div class="deliverable-title">Figma — LLM2CAD</div><div class="deliverable-sub">Hi-fi mockups · Input form · CAD viewer</div></div>
+        </a>
+      </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Demo</div>
+      <video controls style="width:100%; border-radius:var(--radius); background:#000; display:block;">
+        <source src="assets/LLM2CAD_demo.mov" type="video/mp4">
+        <source src="assets/LLM2CAD_demo.mov" type="video/quicktime">
+      </video>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Figma Screens</div>
+      <iframe class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/essWDP90vFc7FJZlIRsDJU/LLM2CAD?node-id=0-1&t=2Uc5cQQzhtIGrDit-1" allowfullscreen></iframe>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Screenshots</div>
+      <div class="gallery-grid">
+        <img src="assets/prompt.jpg" alt="Prompt Input" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/expanded.jpg" alt="Expanded View" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/LLM2CAD_lp.jpg" alt="LLM2CAD — Landing Page" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/LLM2CAD_prompt.jpg" alt="LLM2CAD — Prompt" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/LLM2CAD_Input.jpg" alt="LLM2CAD — Input" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/LLM2CAD_PromptPreview.jpg" alt="LLM2CAD — Prompt Preview" onclick="openLightbox(this.src, this.alt)">
+      </div>
+    </div>
+
+    
+  </main>
+</div>
+
+
+<nav class="project-nav">
+  <a class="project-nav-prev" href="whyzen.html">← Whyzen</a>
+  <a class="project-nav-next" href="color-perception.html">Color Perception Tool →</a>
+</nav>
+
+<footer>© 2026 TRI UX Portfolio · Curated by Carla Bellido, User Experience Architect</footer>
+<script>
+
+  // Lightbox
+  function openLightbox(src, alt) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+  // Wire up all gallery images
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+  });
+
+  function showTab(id) {
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('pane-' + id).classList.add('active');
+    document.querySelector('[data-tab="' + id + '"]').classList.add('active');
+  }
+</script>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unstuck — TRI UX</title>
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="nav-back" href="index.html">← Back to Portfolio</a>
+    <a href="index.html"><img src="assets/rse_logo.svg" alt="RSE Logo" style="height:28px;display:block;"></a>
+  </div>
+</nav>
+
+<div class="cs-hero" style="background: linear-gradient(135deg, #0a1200 0%, #182000 100%);">
+  <div class="cs-hero-inner">
+    <div class="cs-hero-chips"><span class="badge badge-type">Web App</span><span class="badge badge-done">Completed</span><span class="badge badge-jira">TRI-35736</span></div>
+    <h1>Unstuck</h1>
+    <p class="cs-hero-desc">Ubiquitous Just-in-Time Interventions for Creative Professionals — a browser-based app helping people overcome creative blocks at the right moment.</p>
+    <div class="cs-hero-links"><a class="btn btn-primary" href="#demo">▶ Demo</a><a class="btn btn-outline" href="https://www.figma.com/design/55hkDhTPKT0ya7tcjYyyit/Unstuck-App?node-id=116-415&t=6QIHjQtY8n4MkEzo-1" target="_blank">✦ Figma</a><a class="btn btn-outline" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-35736" target="_blank">⬡ Jira Story</a></div>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="cs-sidebar">
+
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="overview" onclick="showTab('overview')">
+        Project Overview
+      </button>
+      <button class="tab-btn" data-tab="team" onclick="showTab('team')">
+        Team
+      </button>
+    </nav>
+
+    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Overview</h3><p>Unstuck provides just-in-time interventions for creative professionals experiencing blocks — delivering contextual nudges and creative prompts at the right moment in the workflow.</p></div>
+<div class="tab-section"><h3>Context</h3><p>A browser-based application targeting creative professionals who benefit from external stimuli when stuck in ideation or problem-solving phases.</p></div></div>
+    <div id="pane-team" class="tab-pane"><div class="tab-section">
+          <h3>Team</h3>
+          <ul class="team-list">
+            <li><span class="team-name">Adrien Cogny</span><span class="team-role">Infrastructure Engineer</span></li>
+            <li><span class="team-name">Arvind Kalyanaraman</span><span class="team-role">Research Scientist</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:d99b0a71-c9b3-48ae-8be6-e07f9f7895a6" target="_blank">Carla Bellido</a><span class="team-role">UX Designer</span></li>
+            <li><span class="team-name">Jaysen Rajkomar</span><span class="team-role">Senior Manager, Associate General Counsel</span></li>
+            <li><span class="team-name">Kalani Murakami</span><span class="team-role">Senior Software Engineer</span></li>
+            <li><span class="team-name">Kevin McGee</span><span class="team-role">Research Scientist</span></li>
+            <li><span class="team-name">Marco Mora</span><span class="team-role">Research Scientist</span></li>
+            <li><span class="team-name">Matt Hong</span><span class="team-role">Software Engineer</span></li>
+            <li><span class="team-name">Matt Klenk</span><span class="team-role">Senior Research Scientist</span></li>
+            <li><span class="team-name">Monica Van</span><span class="team-role">Research Scientist</span></li>
+            <li><span class="team-name">Nayeli Bravo</span><span class="team-role">Designer</span></li>
+            <li><span class="team-name">Pablo Paredes</span><span class="team-role">Research Scientist</span></li>
+            <li><span class="team-name">Shabnam Hakimi</span><span class="team-role">Research Scientist</span></li>
+          </ul>
+        </div>
+    </div></aside>
+
+  <!-- RIGHT CONTENT -->
+  <main class="cs-content">
+
+    <!-- Banner -->
+    <div class="cs-banner">
+      <img src="assets/unstuck4.jpg" alt="Unstuck App" style="width:100%;height:220px;object-fit:cover;object-position:top;border-radius:var(--radius);display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="media-placeholder banner-ph" style="display:none;">
+        <div class="ph-icon" style="font-size:1.8rem">🖼️</div>
+        <div class="ph-sub">unstuck4.jpg not found</div>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Links</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+        <a class="deliverable-link" href="https://www.figma.com/design/55hkDhTPKT0ya7tcjYyyit/Unstuck-App?node-id=116-415&t=6QIHjQtY8n4MkEzo-1" target="_blank">
+          <span class="deliverable-icon">✦</span>
+          <div><div class="deliverable-title">Figma — Unstuck App</div><div class="deliverable-sub">Hi-fi mockups · Prototype · Interaction models</div></div>
+        </a>
+        <a class="deliverable-link" href="https://docs.google.com/presentation/d/1DanEBIQAC-XqqP7ZhRZUzUF4r6Q-zFqi/edit?usp=sharing&ouid=101385567175109680197&rtpof=true&sd=true" target="_blank">
+          <span class="deliverable-icon">📊</span>
+          <div><div class="deliverable-title">Research Presentation</div><div class="deliverable-sub">Google Slides · Findings · Recommendations</div></div>
+        </a>
+      </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section" id="demo">
+      <div class="cs-section-label">Demo</div>
+      <video controls style="width:100%; border-radius:var(--radius); background:#000; display:block;">
+        <source src="assets/Unstuck Full Walkthrough Redesigned.mov" type="video/mp4">
+        <source src="assets/Unstuck Full Walkthrough Redesigned.mov" type="video/quicktime">
+        Your browser does not support this video format.
+      </video>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Figma Screens</div>
+      <iframe class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/55hkDhTPKT0ya7tcjYyyit/Unstuck-App?node-id=116-415&t=6QIHjQtY8n4MkEzo-1" allowfullscreen></iframe>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Screenshots</div>
+      <div class="gallery-grid">
+        <img src="assets/unstuck0.jpg" alt="Unstuck — Screen 1" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/unstuck1.jpg" alt="Unstuck — Screen 2" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/unstuck2.jpg" alt="Unstuck — Screen 3" onclick="openLightbox(this.src, this.alt)">
+      </div>
+    </div>
+
+    
+  </main>
+</div>
+
+
+<nav class="project-nav">
+  <a class="project-nav-prev" href="color-perception.html">← Color Perception Tool</a>
+  <a class="project-nav-next" href="swarm.html">SWARM Hackathon →</a>
+</nav>
+
+<footer>© 2026 TRI UX Portfolio · Curated by Carla Bellido, User Experience Architect</footer>
+<script>
+
+  // Lightbox
+  function openLightbox(src, alt) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+  // Wire up all gallery images
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+  });
+
+  function showTab(id) {
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('pane-' + id).classList.add('active');
+    document.querySelector('[data-tab="' + id + '"]').classList.add('active');
+  }
+</script>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+</body>
+</html>

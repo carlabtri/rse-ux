@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ops Chatbot — TRI UX</title>
+  <link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="nav-back" href="../portfolio.html">← Back to Portfolio</a>
+    <a href="../index.html"><img src="../assets/rse_logo.svg" alt="RSE Logo" style="height:28px;display:block;"></a>
+  </div>
+</nav>
+
+<div class="cs-hero" style="background: linear-gradient(135deg, #1a0002 0%, #2d0004 100%);">
+  <div class="cs-hero-inner">
+    <div class="cs-hero-chips"><span class="badge badge-type">AI Tools</span><span class="badge badge-open">Open</span><span class="badge badge-jira">TRI-48505</span></div>
+    <h1>Ops Chatbot</h1>
+    <p class="cs-hero-desc">An internal AI-powered tool allowing users to select between three underlying LLMs for day-to-day tasks, spanning an evaluation dashboard and a voice-enabled mobile interface.</p>
+    <div class="cs-hero-links"><a class="btn btn-primary" href="#">▶ Demo</a><a class="btn btn-outline" href="#">✦ Figma</a><a class="btn btn-outline" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-48505" target="_blank">⬡ Jira Epic</a></div>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="cs-sidebar">
+
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="overview" onclick="showTab('overview')">
+        Project Overview
+      </button>
+      <button class="tab-btn" data-tab="team" onclick="showTab('team')">
+        Team
+      </button>
+    </nav>
+
+    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Part 1 — Chatbot Interface</h3><p>AI-powered chatbot integrated into TRI's intranet.</p></div>
+<div class="tab-section"><h3>Part 2 — Evaluation Tool</h3><p>Full UI for an internal LLM evaluation platform enabling TRI researchers to evaluate, compare, and analyze language model outputs through a structured dashboard and thread-detail view.</p></div>
+<div class="tab-section"><h3>Key Feature</h3><p>Users can switch between three underlying LLMs — the UX needed to make this selection clear, contextual, and non-disruptive to the workflow.</p></div></div>
+    <div id="pane-team" class="tab-pane"><div class="tab-section">
+          <h3>Team</h3>
+          <ul class="team-list">
+            <li><span class="team-name">Ashish Mangukiya</span><span class="team-role">Mid-Level UI Engineer</span></li>
+            <li><span class="team-name">Ayush Nema</span><span class="team-role">ML Engineer</span></li>
+            <li><span class="team-name">Carla Bellido</span><span class="team-role">UX Designer</span></li>
+            <li><span class="team-name">Devang Motwani</span><span class="team-role">Senior Software Engineer</span></li>
+            <li><span class="team-name">Krish Sharma</span><span class="team-role">Machine Learning Engineer</span></li>
+            <li><span class="team-name">Mike Puzon</span><span class="team-role">Staff Software Engineer</span></li>
+            <li><span class="team-name">Sarthak Khandelwal</span><span class="team-role"></span></li>
+            <li><span class="team-name">Sem Onyalo</span><span class="team-role">System Software Engineer</span></li>
+          </ul>
+        </div>
+    </div></aside>
+
+  <!-- RIGHT CONTENT -->
+  <main class="cs-content">
+
+    <!-- Banner -->
+    <div class="cs-banner">
+      <img src="../assets/LLM_Dashboard.jpg" alt="LLM Dashboard" style="width:100%;border-radius:var(--radius);object-fit:cover;max-height:340px;object-position:top;" onerror="this.parentElement.innerHTML='<div class=&quot;media-placeholder banner-ph&quot;><div class=&quot;ph-icon&quot; style=&quot;font-size:1.8rem&quot;>🖼️</div><div class=&quot;ph-sub&quot;>LLM_Dashboard.jpg not found</div></div>'">
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Deliverables</div>
+      <div class="gallery-grid"><div class="media-placeholder gallery-ph"><div class="ph-icon" style="font-size:1.4rem">📸</div><div class="ph-sub" style="font-size:0.75rem">Add screenshot</div></div><div class="media-placeholder gallery-ph"><div class="ph-icon" style="font-size:1.4rem">📸</div><div class="ph-sub" style="font-size:0.75rem">Add screenshot</div></div><div class="media-placeholder gallery-ph"><div class="ph-icon" style="font-size:1.4rem">📸</div><div class="ph-sub" style="font-size:0.75rem">Add screenshot</div></div><div class="media-placeholder gallery-ph"><div class="ph-icon" style="font-size:1.4rem">📸</div><div class="ph-sub" style="font-size:0.75rem">Add screenshot</div></div></div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Prototype</div>
+      <div class="media-placeholder proto-ph"><div class="ph-icon">▶</div><div class="ph-title">Prototype / Demo</div><div class="ph-sub">Embed a prototype link, Lottie animation, or screen recording here</div></div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Figma Screens — Phase 1: Chatbot Interface</div>
+      <iframe class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/vElUrvnwEzI0Dit26cewNT/Ops-Chatbot?node-id=0-1" allowfullscreen></iframe>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Figma Screens — Phase 2: Evaluation Tool</div>
+      <iframe class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/nF7r5cwPTas9F4AovEAFwV/LLM?node-id=0-1" allowfullscreen></iframe>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Screenshots</div>
+      <div class="gallery-grid">
+        <img src="../assets/LLM_Dashboard.jpg" alt="LLM Dashboard" onclick="openLightbox(this.src, this.alt)">
+        <div class="media-placeholder gallery-ph"><div class="ph-icon" style="font-size:1.4rem">📸</div><div class="ph-sub" style="font-size:0.75rem">Add screenshot</div></div>
+        <div class="media-placeholder gallery-ph"><div class="ph-icon" style="font-size:1.4rem">📸</div><div class="ph-sub" style="font-size:0.75rem">Add screenshot</div></div>
+        <div class="media-placeholder gallery-ph"><div class="ph-icon" style="font-size:1.4rem">📸</div><div class="ph-sub" style="font-size:0.75rem">Add screenshot</div></div>
+      </div>
+    </div>
+
+    
+  </main>
+</div>
+
+<footer>© 2026 TRI UX Portfolio · Curated by Carla Bellido, UX Architect</footer>
+<script>
+
+  // Lightbox
+  function openLightbox(src, alt) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+  // Wire up all gallery images
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+  });
+
+  function showTab(id) {
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('pane-' + id).classList.add('active');
+    document.querySelector('[data-tab="' + id + '"]').classList.add('active');
+  }
+</script>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+</body>
+</html>

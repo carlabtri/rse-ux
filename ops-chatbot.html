@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ops Chatbot — TRI UX</title>
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="nav-back" href="index.html">← Back to Portfolio</a>
+    <a href="index.html"><img src="assets/rse_logo.svg" alt="RSE Logo" style="height:28px;display:block;"></a>
+  </div>
+</nav>
+
+<div class="cs-hero" style="background: linear-gradient(135deg, #1a0002 0%, #2d0004 100%);">
+  <div class="cs-hero-inner">
+    <div class="cs-hero-chips"><span class="badge badge-type">AI Tools</span><span class="badge badge-done">Completed</span><span class="badge badge-jira">TRI-45351</span></div>
+    <h1>Ops Chatbot</h1>
+    <p class="cs-hero-desc">An internal AI-powered tool allowing users to select between three underlying LLMs for day-to-day tasks, spanning an evaluation dashboard and a voice-enabled mobile interface.</p>
+    <div class="cs-hero-links"><a class="btn btn-primary" href="#" onclick="event.preventDefault();openVideoModal()">▶ Demo</a><a class="btn btn-outline" href="#">✦ Figma</a><a class="btn btn-outline" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-45351" target="_blank">⬡ Jira Epic</a></div>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="cs-sidebar">
+
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="overview" onclick="showTab('overview')">
+        Project Overview
+      </button>
+      <button class="tab-btn" data-tab="team" onclick="showTab('team')">
+        Team
+      </button>
+    </nav>
+
+    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Part 1 — Chatbot Interface</h3><p>AI-powered chatbot integrated into TRI's intranet.</p></div>
+<div class="tab-section"><h3>Part 2 — Evaluation Tool</h3><p>Full UI for an internal LLM evaluation platform enabling TRI researchers to evaluate, compare, and analyze language model outputs through a structured dashboard and thread-detail view.</p></div>
+<div class="tab-section"><h3>Key Feature</h3><p>Users can switch between three underlying LLMs — the UX needed to make this selection clear, contextual, and non-disruptive to the workflow.</p></div></div>
+    <div id="pane-team" class="tab-pane"><div class="tab-section">
+          <h3>Team</h3>
+          <ul class="team-list">
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:71c91a24-56bd-4e8e-a9d9-471c5fdfc2e3" target="_blank">Ashish Mangukiya</a><span class="team-role">Mid-Level UI Engineer</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:a16ef30f-a116-4969-86b5-3ca04c51396f" target="_blank">Ayush Nema</a><span class="team-role">ML Engineer</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:d99b0a71-c9b3-48ae-8be6-e07f9f7895a6" target="_blank">Carla Bellido</a><span class="team-role">UX Designer</span></li>
+            <li><span class="team-name">Devang Motwani</span><span class="team-role">Senior Software Engineer</span></li>
+            <li><span class="team-name">Krish Sharma</span><span class="team-role">Machine Learning Engineer</span></li>
+            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/60cba7dcdeecef006a954b2f" target="_blank">Mike Puzon</a><span class="team-role">Staff Software Engineer</span></li>
+            <li><span class="team-name">Sarthak Khandelwal</span><span class="team-role"></span></li>
+            <li><span class="team-name">Sem Onyalo</span><span class="team-role">System Software Engineer</span></li>
+            <li><span class="team-name" style="cursor:default;">Mark Tse</span><span class="team-role">UX Designer · No longer with TRI</span></li>
+          </ul>
+        </div>
+    </div></aside>
+
+  <!-- RIGHT CONTENT -->
+  <main class="cs-content">
+
+    <!-- Banner -->
+    <div class="cs-banner">
+      <img src="assets/LLM_Dashboard.jpg" alt="LLM Dashboard" style="width:100%;border-radius:var(--radius);object-fit:cover;max-height:340px;object-position:top;" onerror="this.parentElement.innerHTML='<div class=&quot;media-placeholder banner-ph&quot;><div class=&quot;ph-icon&quot; style=&quot;font-size:1.8rem&quot;>🖼️</div><div class=&quot;ph-sub&quot;>LLM_Dashboard.jpg not found</div></div>'">
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Links</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+        <a class="deliverable-link" href="https://ops-chatbot.tri.global/" target="_blank">
+          <span class="deliverable-icon">▶</span>
+          <div><div class="deliverable-title">Live App — Ops Chatbot</div><div class="deliverable-sub">ops-chatbot.tri.global</div></div>
+        </a>
+        <a class="deliverable-link" href="https://toyotaresearchinstitute.atlassian.net/wiki/x/EgCIHAE" target="_blank">
+          <span class="deliverable-icon">📄</span>
+          <div><div class="deliverable-title">Confluence Wiki</div><div class="deliverable-sub">Atlassian · Ops Chatbot</div></div>
+        </a>
+        <a class="deliverable-link" href="https://toyotaresearchinstitute.atlassian.net/wiki/x/BICFHAE" target="_blank">
+          <span class="deliverable-icon">📄</span>
+          <div><div class="deliverable-title">Confluence Wiki</div><div class="deliverable-sub">Atlassian · Evaluation Tool</div></div>
+        </a>
+        <a class="deliverable-link" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-45351" target="_blank">
+          <span class="deliverable-icon">⬡</span>
+          <div><div class="deliverable-title">Jira Epic — TRI-45351</div><div class="deliverable-sub">Project tracking · Requirements</div></div>
+        </a>
+      </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Demo</div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div>
+          <div style="font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Part 1 — Chatbot Interface</div>
+          <video controls style="width:100%; border-radius:var(--radius); background:#000; display:block;">
+            <source src="assets/chatbot2025.mov" type="video/mp4">
+            <source src="assets/chatbot2025.mov" type="video/quicktime">
+          </video>
+        </div>
+        <div>
+          <div style="font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Part 2 — LLM Evaluation Tool</div>
+          <video controls style="width:100%; border-radius:var(--radius); background:#000; display:block;">
+            <source src="assets/LLM Evaluation Tool.mov" type="video/mp4">
+            <source src="assets/LLM Evaluation Tool.mov" type="video/quicktime">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Figma Screens — Phase 1: Chatbot Interface</div>
+      <iframe class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/vElUrvnwEzI0Dit26cewNT/Ops-Chatbot?node-id=0-1" allowfullscreen></iframe>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Figma Screens — Phase 2: Evaluation Tool</div>
+      <iframe class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/nF7r5cwPTas9F4AovEAFwV/LLM?node-id=0-1" allowfullscreen></iframe>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Screenshots</div>
+      <div class="gallery-grid">
+        <img src="assets/LLM_Dashboard.jpg" alt="LLM Dashboard" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/chatbot_lp.jpg" alt="Chatbot Landing Page" onclick="openLightbox(this.src, this.alt)">
+        <img src="assets/Chat_LandingPage.jpg" alt="Chat Landing Page" onclick="openLightbox(this.src, this.alt)">
+      </div>
+    </div>
+
+    
+  </main>
+</div>
+
+
+<nav class="project-nav">
+  <a class="project-nav-prev" href="tri-website.html">← TRI Website Redesign</a>
+  <a class="project-nav-next" href="whyzen.html">Whyzen →</a>
+</nav>
+
+<footer>© 2026 TRI UX Portfolio · Curated by Carla Bellido, User Experience Architect</footer>
+<script>
+
+  // Video Modal
+  function openVideoModal() {
+    const m = document.getElementById('video-modal');
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideoModal(e) {
+    if (!e || e.target === document.getElementById('video-modal') || e.type === 'click') {
+      const m = document.getElementById('video-modal');
+      m.style.display = 'none';
+      document.getElementById('modal-video').pause();
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Lightbox
+  function openLightbox(src, alt) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+  // Wire up all gallery images
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+  });
+
+  function showTab(id) {
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('pane-' + id).classList.add('active');
+    document.querySelector('[data-tab="' + id + '"]').classList.add('active');
+  }
+</script>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- Video Modal -->
+<div id="video-modal" onclick="closeVideoModal(event)" style="display:none; position:fixed; inset:0; z-index:300; background:rgba(15,15,14,0.6); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); align-items:center; justify-content:center;">
+  <button onclick="closeVideoModal()" style="position:fixed; top:20px; right:24px; background:rgba(50,49,48,0.85); border:1px solid rgba(190,190,190,0.2); color:#fff; font-size:1.1rem; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.15s;" onmouseover="this.style.background='#EB0A1E'" onmouseout="this.style.background='rgba(50,49,48,0.85)'">✕</button>
+  <video id="modal-video" controls style="max-width:90vw; max-height:88vh; border-radius:12px; box-shadow:0 32px 80px rgba(0,0,0,0.6); display:block;">
+    <source src="assets/chatbot 2025-09-04 at 4.01.06 PM.mov" type="video/mp4">
+    <source src="assets/chatbot 2025-09-04 at 4.01.06 PM.mov" type="video/quicktime">
+  </video>
+</div>
+</body>
+</html>
