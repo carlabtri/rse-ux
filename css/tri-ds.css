@@ -1,0 +1,84 @@
+/* ──────────────────────────────────────────────────────────────────
+   TRI Merged Design System — Portfolio Integration
+   Gellix typeface + DS component tokens adapted for dark theme
+   ────────────────────────────────────────────────────────────────── */
+
+/* ─── Gellix — TRI brand typeface ───────────────────────────────── */
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-Thin.woff2") format("woff2"),url("../fonts/Gellix-Thin.woff") format("woff"); font-weight:100; font-style:normal; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-ThinItalic.woff2") format("woff2"),url("../fonts/Gellix-ThinItalic.woff") format("woff"); font-weight:100; font-style:italic; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-Light.woff2") format("woff2"),url("../fonts/Gellix-Light.woff") format("woff"); font-weight:300; font-style:normal; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-LightItalic.woff2") format("woff2"),url("../fonts/Gellix-LightItalic.woff") format("woff"); font-weight:300; font-style:italic; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-Regular.woff2") format("woff2"),url("../fonts/Gellix-Regular.woff") format("woff"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-RegularItalic.woff2") format("woff2"),url("../fonts/Gellix-RegularItalic.woff") format("woff"); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-Medium.woff2") format("woff2"),url("../fonts/Gellix-Medium.woff") format("woff"); font-weight:500; font-style:normal; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-MediumItalic.woff2") format("woff2"),url("../fonts/Gellix-MediumItalic.woff") format("woff"); font-weight:500; font-style:italic; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-SemiBold.woff2") format("woff2"),url("../fonts/Gellix-SemiBold.woff") format("woff"); font-weight:600; font-style:normal; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-SemiBoldItalic.woff2") format("woff2"),url("../fonts/Gellix-SemiBoldItalic.woff") format("woff"); font-weight:600; font-style:italic; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-Bold.woff2") format("woff2"),url("../fonts/Gellix-Bold.woff") format("woff"); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-BoldItalic.woff2") format("woff2"),url("../fonts/Gellix-BoldItalic.woff") format("woff"); font-weight:700; font-style:italic; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-ExtraBold.woff2") format("woff2"),url("../fonts/Gellix-ExtraBold.woff") format("woff"); font-weight:800; font-style:normal; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-ExtraBoldItalic.woff2") format("woff2"),url("../fonts/Gellix-ExtraBoldItalic.woff") format("woff"); font-weight:800; font-style:italic; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-Black.woff2") format("woff2"),url("../fonts/Gellix-Black.woff") format("woff"); font-weight:900; font-style:normal; font-display:swap; }
+@font-face { font-family:"Gellix"; src:url("../fonts/Gellix-BlackItalic.woff2") format("woff2"),url("../fonts/Gellix-BlackItalic.woff") format("woff"); font-weight:900; font-style:italic; font-display:swap; }
+
+/* ─── Override font stack & brand red ───────────────────────────── */
+:root {
+  --font-sans: "Gellix", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --accent:    #CC2231;   /* TRI brand red */
+  --accent-hover: #a81b28;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── Buttons — DS spec ──────────────────────────────────────────── */
+/* height 36px · border-radius 6px · 14px / 500 */
+.btn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  gap: 6px;
+}
+.btn-primary { background: var(--accent); }
+.btn-primary:hover { background: var(--accent-hover); transform: none; box-shadow: 0 1px 4px rgba(204,34,49,0.35); }
+.btn-outline { border-color: rgba(190,190,190,0.28); }
+.btn-outline:hover { border-color: var(--accent); background: rgba(204,34,49,0.06); }
+
+/* ─── Chips / Badges — DS spec ───────────────────────────────────── */
+/* pill · 12px / 500 · 4px 10px padding */
+.badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 99px;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.badge-type  { background: rgba(190,255,140,0.14); color: #BEFF8C; border: 1px solid rgba(190,255,140,0.22); }
+.badge-done  { background: rgba(46,125,50,0.14);   color: #4caf50; border: 1px solid rgba(46,125,50,0.25); }
+.badge-review{ background: rgba(209,73,0,0.14);    color: #ff8a50; border: 1px solid rgba(209,73,0,0.25); }
+.badge-open  { background: rgba(148,163,184,0.12); color: #94a3b8; border: 1px solid rgba(148,163,184,0.2); }
+.badge-jira  { background: rgba(29,115,191,0.14);  color: #5ba3d6; border: 1px solid rgba(29,115,191,0.25); }
+
+/* ─── Inputs — DS spec (project-request page) ────────────────────── */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(204,34,49,0.18);
+}
