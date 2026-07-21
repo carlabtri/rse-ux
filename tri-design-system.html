@@ -109,11 +109,16 @@
 
     // 1. Inject a persistent style into the open shadow root
     var sr = stage.shadowRoot;
+    // Suppress via official attribute first
+    stage.setAttribute('no-rail', '');
+
     if (sr) {
       if (!sr.querySelector('#tri-hide-col1')) {
         var st = document.createElement('style');
         st.id = 'tri-hide-col1';
         st.textContent =
+          ':host { --deck-rail-w: 0px !important; }' +
+          '.rail { display:none!important; width:0!important; }' +
           'nav,aside,[class*="strip"],[class*="sidebar"],[class*="filmstrip"],' +
           '[class*="thumb"],[class*="panel"],[class*="Sidebar"],[class*="Strip"]' +
           '{ display:none!important; }';
@@ -121,7 +126,7 @@
       }
       // Also imperatively hide any matching elements
       sr.querySelectorAll(
-        'nav,aside,[class*="strip"],[class*="sidebar"],[class*="filmstrip"],[class*="thumb"],[class*="panel"]'
+        '.rail,nav,aside,[class*="strip"],[class*="sidebar"],[class*="filmstrip"],[class*="thumb"],[class*="panel"]'
       ).forEach(function(el) { el.style.setProperty('display','none','important'); });
     }
 
