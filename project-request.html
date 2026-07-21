@@ -19,11 +19,11 @@
 
     /* Nav */
     nav { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px); background: rgba(31,31,30,0.93); border-bottom: 1px solid var(--border); }
-    nav .inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; max-width: 860px; margin: 0 auto; }
-    .nav-back { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
-    .nav-back:hover { color: var(--text); }
-    .nav-logo { font-weight: 700; font-size: 0.95rem; color: var(--text); }
-    .nav-logo span { color: var(--accent); }
+    nav .inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; max-width: 1080px; margin: 0 auto; }
+    nav ul { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: var(--text); }
+    nav .nav-active { color: var(--text); }
 
     /* Hero */
     .page-hero { padding: 48px 28px 16px; max-width: 860px; margin: 0 auto; }
@@ -116,8 +116,13 @@
 
 <nav>
   <div class="inner">
-    <a class="nav-back" href="index.html">← Back to Portfolio</a>
     <a href="index.html"><img src="assets/rse_logo.svg" alt="RSE Logo" style="height:28px;display:block;"></a>
+    <ul>
+      <li><a href="index.html#projects">Case Studies</a></li>
+      <li><a href="index.html#framework">UX Framework</a></li>
+      <li><a href="tri-design-system.html">TRI Design System</a></li>
+      <li><a href="project-request.html" class="nav-active">Project Request</a></li>
+    </ul>
   </div>
 </nav>
 
