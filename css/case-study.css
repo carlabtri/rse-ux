@@ -102,18 +102,18 @@
     .cs-divider { border:none; border-top:1px solid var(--border); margin:36px 0; }
 
     /* Footer */
-    footer { border-top:1px solid var(--border); padding:22px 28px; text-align:center; color:var(--muted); font-size:10px; }
+    footer { border-top:1px solid var(--border); padding:22px 28px; text-align:center; color:var(--muted); font-size:12px; }
 
     /* Scrollbar */
     ::-webkit-scrollbar { width:6px; }
     ::-webkit-scrollbar-track { background:var(--bg); }
     ::-webkit-scrollbar-thumb { background:var(--border); border-radius:99px; }
 
-    .deliverable-link { display:flex; align-items:center; gap:10px; padding:5px 0; text-decoration:none; transition:opacity 0.18s; }
-    .deliverable-link:hover { opacity:0.7; }
-    .deliverable-icon { font-size:0.95rem; flex-shrink:0; width:18px; text-align:center; opacity:0.65; }
-    .deliverable-title { font-size:0.9rem; font-weight:600; color:var(--text); }
-    .deliverable-sub { font-size:0.8rem; color:var(--muted); margin-top:1px; }
+    .deliverable-link { display:flex; align-items:center; gap:14px; background:none; border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px 16px; text-decoration:none; transition:border-color 0.2s; }
+    .deliverable-link:hover { border-color:var(--accent2); }
+    .deliverable-icon { font-size:1.4rem; flex-shrink:0; }
+    .deliverable-title { font-size:0.95rem; font-weight:600; color:var(--text); }
+    .deliverable-sub { font-size:0.95rem; color:var(--muted); margin-top:2px; }
     .team-list { list-style:none; padding:0; margin-top:8px; display:flex; flex-direction:column; gap:12px; }
     .team-list li { display:flex; flex-direction:column; gap:2px; }
     .team-name { font-size:0.95rem; font-weight:600; color:var(--text); text-decoration:none; }
