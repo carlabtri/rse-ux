@@ -16,26 +16,26 @@
       font-family: inherit; cursor: pointer; text-align: left;
     }
     .collapsible-trigger .caret {
-      width: 7px; height: 4px; flex-shrink: 0;
-      background: currentColor;
+      width: 10px; height: 6px; flex-shrink: 0;
+      background: #BEBEBE;
       clip-path: polygon(0 0, 100% 0, 50% 100%);
-      opacity: 0.55; transition: transform 0.22s, opacity 0.22s;
+      transition: transform 0.22s ease;
     }
-    .collapsible-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); opacity: 1; }
+    .collapsible-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
     .collapsible-body {
       display: grid; grid-template-rows: 0fr;
       transition: grid-template-rows 0.28s ease;
     }
     .collapsible-body.open { grid-template-rows: 1fr; }
-    .collapsible-inner { overflow: hidden; padding: 0 20px; }
-    .collapsible-body.open .collapsible-inner { padding: 20px; }
+    .collapsible-inner { overflow: hidden; min-height: 0; }
+    .collapsible-body.open .collapsible-inner { padding: 16px 0 24px; }
   </style>
 </head>
 <body>
 
 <nav>
   <div class="inner">
-    <a class="nav-back" href="index.html">← Back to Portfolio</a>
+    <a class="nav-back" href="index.html#projects">← Back to Case Studies</a>
     <a href="index.html"><img src="assets/rse_logo.svg" alt="RSE Logo" style="height:28px;display:block;"></a>
   </div>
 </nav>
@@ -140,7 +140,7 @@
         <div class="cs-section-label" style="margin-bottom:0;">Features</div>
         <span class="caret"></span>
       </button>
-      <div class="collapsible-body"><div class="collapsible-inner" style="padding:16px 0 0;">
+      <div class="collapsible-body"><div class="collapsible-inner">
         <div style="display:flex; flex-direction:column; gap:20px;">
           <div>
             <h2>Navigation Map</h2>
@@ -173,7 +173,7 @@
         <div class="cs-section-label" style="margin-bottom:0;">Map Requirements</div>
         <span class="caret"></span>
       </button>
-      <div class="collapsible-body"><div class="collapsible-inner" style="padding:16px 0 0;">
+      <div class="collapsible-body"><div class="collapsible-inner">
         <div style="display:flex; flex-direction:column; gap:20px;">
           <div>
             <h2>CARLA Town 15</h2>
