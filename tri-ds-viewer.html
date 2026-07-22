@@ -416,25 +416,11 @@ a:hover, .link:hover { color: var(--link-hover); text-decoration: underline; }
     z-index: 99999;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
-  #ds-bridge img { height: 24px; display: block; flex-shrink: 0; }
-  .dsb-sep { width: 1px; height: 18px; background: rgba(190,190,190,0.25); flex-shrink: 0; }
-  .dsb-tabs { display: flex; gap: 4px; }
-  .dsb-tab {
-    color: #BEBEBE; text-decoration: none;
-    font-size: 0.88rem; font-weight: 500;
-    padding: 5px 13px; border-radius: 6px;
-    transition: all 0.18s;
-  }
-  .dsb-tab:hover { color: #fff; background: rgba(255,255,255,0.06); }
-  .dsb-active {
-    color: #fff;
-    background: rgba(235,10,30,0.12);
-    border: 1px solid rgba(235,10,30,0.3);
-  }
-  .dsb-spacer { flex: 1; }
-  .dsb-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
-  .dsb-links a { color: #BEBEBE; text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+  #ds-bridge img { height: 26px; display: block; flex-shrink: 0; }
+  .dsb-links { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 24px; margin-left: auto; }
+  .dsb-links a { color: #BEBEBE; text-decoration: none; font-size: 0.9rem; transition: color 0.18s; }
   .dsb-links a:hover { color: #fff; }
+  .dsb-active { color: #fff !important; }
   /* Push shell down so bridge bar doesn't overlap */
   .shell { height: calc(100vh - 44px) !important; margin-top: 44px; }
 </style>
@@ -442,15 +428,16 @@ a:hover, .link:hover { color: var(--link-hover); text-decoration: underline; }
 <body>
 <div id="ds-bridge">
   <a href="index.html"><img src="assets/rse_logo.svg" alt="RSE Logo"></a>
-  <div class="dsb-sep"></div>
-  <div class="dsb-tabs">
-    <a href="tri-design-system.html" class="dsb-tab">Case Study</a>
-    <a href="tri-ds-viewer.html" class="dsb-tab dsb-active">Design System</a>
-  </div>
-  <div class="dsb-spacer"></div>
   <ul class="dsb-links">
     <li><a href="index.html#projects">Case Studies</a></li>
     <li><a href="index.html#framework">UX Framework</a></li>
+    <li class="nav-dropdown">
+      <a href="tri-design-system.html" class="dsb-active">TRI Design System</a>
+      <div class="nav-dropdown-menu">
+        <a href="tri-design-system.html">Case Study</a>
+        <a href="tri-ds-viewer.html" class="menu-active">Design System</a>
+      </div>
+    </li>
     <li><a href="project-request.html">Project Request</a></li>
   </ul>
 </div>
