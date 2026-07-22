@@ -21,7 +21,7 @@
   <div class="cs-hero-inner">
     <div class="cs-hero-chips"><span class="badge badge-type">Web App</span><span class="badge badge-done">Completed</span><span class="badge badge-jira">TRI-47677</span></div>
     <h1>Color Perception Tool</h1>
-    <p class="cs-hero-desc">Phase I UI/UX framework for an internal color perception analysis tool supporting TRI's robotics and perception research.</p>
+    <p class="cs-hero-desc">A web-based test that uses ML sampling methods to iteratively measure a user's sensitivity to color — delivering a probability plot that shows how accurately they perceive minor variations of the same hue.</p>
     <div class="cs-hero-links"><a class="btn btn-primary" href="#demo">▶ Demo</a><a class="btn btn-outline" href="https://www.figma.com/design/QVhZjUb3XDip8yqfAxjpuY/Color-Perception---UI?node-id=0-1&t=pbpEjHJ5s5LVIMYG-1" target="_blank">✦ Figma</a><a class="btn btn-outline" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-47357" target="_blank">⬡ Jira Story</a></div>
   </div>
 </div>
@@ -40,8 +40,26 @@
       </button>
     </nav>
 
-    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Overview</h3><p>Designed the Phase I UI/UX framework for an internal color perception analysis tool used in TRI's robotics and perception research team.</p></div>
-<div class="tab-section"><h3>Scope</h3><ul><li>Layout patterns and information hierarchy</li><li>Component library foundations</li><li>Interaction models for Phase I</li><li>Visual design language for future iterations</li></ul></div></div>
+    <div id="pane-overview" class="tab-pane active">
+      <div class="tab-section">
+        <h3>Overview</h3>
+        <p>An internal web app that uses ML sampling methods — including Bayesian sampling — to iteratively identify a user's sensitivity to a particular color. At the end of the test, users receive a probability plot showing how accurately they perceive minor variations of the same hue.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Goal</h3>
+        <p>Enable TRI researchers to test individual hue sensitivity so they can understand how accurately participants perceive slight differences between colors.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Phase I Scope</h3>
+        <ul>
+          <li>Color selection input fields</li>
+          <li>Preview and testing range</li>
+          <li>Instructions and color gradient block</li>
+          <li>Practice grid</li>
+          <li>Page loading states</li>
+        </ul>
+      </div>
+    </div>
     <div id="pane-team" class="tab-pane"><div class="tab-section">
           <h3>Team</h3>
           <ul class="team-list">
@@ -67,14 +85,42 @@
     <div class="cs-section">
       <div class="cs-section-label">Links</div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
-        <a class="deliverable-link" href="https://www.figma.com/design/QVhZjUb3XDip8yqfAxjpuY/Color-Perception---UI?node-id=0-1&t=pbpEjHJ5s5LVIMYG-1" target="_blank">
+        <a class="deliverable-link" href="https://www.figma.com/design/QVhZjUb3XDip8yqfAxjpuY/Color-Perception---UI?node-id=34-94&t=rJ6c48bX6KC0EltF-1" target="_blank">
           <span class="deliverable-icon">✦</span>
           <div><div class="deliverable-title">Figma — Color Perception UI</div><div class="deliverable-sub">Hi-fi mockups · Component library · Interaction models</div></div>
+        </a>
+        <a class="deliverable-link" href="https://www.figma.com/make/e4jawgrOZssME7zY7DxZSs/Interactive-Prototype-for-Color-Tool?t=kRe7pDWUWbJNQDxP-20&fullscreen=1" target="_blank">
+          <span class="deliverable-icon">▶</span>
+          <div><div class="deliverable-title">Figma Interactive Prototype</div><div class="deliverable-sub">Live clickable prototype · Full test flow</div></div>
         </a>
         <a class="deliverable-link" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-47357" target="_blank">
           <span class="deliverable-icon">⬡</span>
           <div><div class="deliverable-title">Jira Story — TRI-47357</div><div class="deliverable-sub">Project tracking · Requirements · Acceptance criteria</div></div>
         </a>
+      </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Features</div>
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div>
+          <h2>Welcome Page</h2>
+          <p>An introductory screen that presents instructions to orient users before the test begins.</p>
+        </div>
+        <div>
+          <h2>Gradient Test</h2>
+          <p>Users are shown a color gradient and asked to identify the outlier — testing their ability to distinguish subtle hue variations within a controlled range.</p>
+        </div>
+        <div>
+          <h2>Practice Screens</h2>
+          <p>Four color squares labeled 1–4 are displayed side by side. Users identify the outlier using their keyboard, building familiarity with the test format before the scored session begins.</p>
+        </div>
+        <div>
+          <h2>Results &amp; Probability Plot</h2>
+          <p>At the end of the session, a probability plot is generated from the Bayesian sampling data — visualizing the user's color sensitivity threshold and how reliably they identified minor variations.</p>
+        </div>
       </div>
     </div>
 
