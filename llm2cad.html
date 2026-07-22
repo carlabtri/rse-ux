@@ -7,6 +7,30 @@
 <link rel="stylesheet" href="css/tri-ds.css">
   <link rel="stylesheet" href="css/case-study.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    .collapsible-trigger {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 0; background: none; border: none;
+      color: var(--text); font-size: 0.95rem; font-weight: 600;
+      font-family: inherit; cursor: pointer; text-align: left;
+    }
+    .collapsible-trigger .caret {
+      width: 10px; height: 6px; flex-shrink: 0;
+      background: #BEBEBE;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transition: transform 0.22s ease;
+    }
+    .collapsible-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
+    .collapsible-body {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+    .collapsible-body.open { grid-template-rows: 1fr; }
+    .collapsible-inner { overflow: hidden; min-height: 0; }
+    .collapsible-body.open .collapsible-inner { padding: 12px 0 16px; }
+    .cs-section:has(.collapsible-trigger) { margin-bottom: 20px; }
+    .cs-section:has(.collapsible-trigger) .cs-section-label { margin-bottom: 0; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
 
@@ -40,8 +64,16 @@
       </button>
     </nav>
 
-    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Overview</h3><p>LLM2CAD transforms text, image, and program prompts into CAD files. Users describe what they want — in natural language, as an image reference, or as a program — and the tool produces precise CAD output.</p></div>
-<div class="tab-section"><h3>Design Focus</h3><ul><li>Intuitive natural language input form</li><li>Clear CAD viewer with exploration controls</li><li>Feedback loop between prompt and output</li></ul></div></div>
+    <div id="pane-overview" class="tab-pane active">
+      <div class="tab-section">
+        <h3>Overview</h3>
+        <p>LLM2CAD transforms text, image, and program prompts into CAD files. Users describe what they want — in natural language, as an image reference, or as a program — and the tool produces precise CAD output in industry-standard BREP geometry.</p>
+      </div>
+      <div class="tab-section">
+        <h3>About</h3>
+        <p>Built by researchers and software developers from the Human-Centered AI / Future Product Innovation (HCAI) team at Toyota Research Institute.</p>
+      </div>
+    </div>
     <div id="pane-team" class="tab-pane"><div class="tab-section">
           <h3>Team</h3>
           <ul class="team-list">
@@ -69,6 +101,43 @@
         <div class="ph-icon" style="font-size:1.8rem">🖼️</div>
         <div class="ph-sub">BrochurePage.jpg not found</div>
       </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Features</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <h2>Input Flexibility</h2>
+            <p>Accepts text descriptions, image references, and program-based specifications — giving engineers and designers multiple ways to communicate their intent to the system.</p>
+          </div>
+          <div>
+            <h2>BREP Geometry Output</h2>
+            <p>All inputs are converted into industry-standard Boundary Representation (BREP) geometry, ensuring outputs are compatible with professional CAD workflows and manufacturing pipelines.</p>
+          </div>
+          <div>
+            <h2>AI Vision &amp; Language Models</h2>
+            <p>Advanced vision and language models interpret engineering intent from natural language and visual references, generating manufacturable 3D models without manual reconstruction.</p>
+          </div>
+          <div>
+            <h2>Natural Language Input Form</h2>
+            <p>An intuitive prompt interface designed to minimize the learning curve — describe what you need in plain language and the model handles the translation to geometry.</p>
+          </div>
+          <div>
+            <h2>CAD Viewer</h2>
+            <p>A built-in 3D viewer with exploration controls lets users inspect generated geometry before exporting, with tools for rotation, pan, and zoom.</p>
+          </div>
+          <div>
+            <h2>Feedback Loop</h2>
+            <p>A direct connection between the prompt and output panels supports rapid iteration — refine your description and regenerate geometry in a tight design loop.</p>
+          </div>
+        </div>
+      </div></div>
     </div>
 
     <hr class="cs-divider"/>
@@ -170,6 +239,12 @@
       img.addEventListener('click', () => openLightbox(img.src));
     });
   });
+
+  function toggleCollapsible(btn) {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  }
 
   function showTab(id) {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
