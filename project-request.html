@@ -35,7 +35,7 @@
     .form-wrap { max-width: 860px; margin: 0 auto; padding: 24px 28px 80px; }
 
     /* Form card */
-    .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 40px; margin-bottom: 20px; }
+    .form-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 40px; margin-bottom: 20px; }
     .form-card h2 { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent2); margin-bottom: 24px; }
 
     /* Field groups */
@@ -46,7 +46,7 @@
     label { font-size: 0.95rem; font-weight: 600; color: var(--text); }
     label .req { color: var(--accent); margin-left: 2px; }
     input[type="text"], input[type="email"], select, textarea {
-      background: var(--bg); border: 1px solid var(--border);
+      background: var(--surface2); border: 1px solid var(--border);
       border-radius: var(--radius-sm); padding: 10px 14px;
       color: var(--text); font-size: 0.95rem; font-family: inherit;
       width: 100%; transition: border-color 0.2s, box-shadow 0.2s;
@@ -59,7 +59,7 @@
     input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.5; }
     textarea { resize: vertical; min-height: 90px; }
     select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23BEBEBE' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
-    option { background: var(--bg); }
+    option { background: var(--surface2); }
 
     /* Service checkboxes */
     .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -68,7 +68,7 @@
     .service-chip input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
     .service-chip label {
       display: flex; align-items: flex-start; gap: 10px;
-      background: var(--bg); border: 1px solid var(--border);
+      background: var(--surface2); border: 1px solid var(--border);
       border-radius: var(--radius-sm); padding: 14px;
       cursor: pointer; transition: all 0.18s; font-size: 0.95rem; font-weight: 500;
     }
@@ -84,7 +84,7 @@
 
     /* Priority pills */
     .priority-row { display: flex; gap: 10px; flex-wrap: wrap; }
-    .priority-btn { background: var(--bg); border: 1px solid var(--border); color: var(--muted); font-size: 0.95rem; font-weight: 500; padding: 8px 18px; border-radius: 99px; cursor: pointer; transition: all 0.18s; }
+    .priority-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); font-size: 0.95rem; font-weight: 500; padding: 8px 18px; border-radius: 99px; cursor: pointer; transition: all 0.18s; }
     .priority-btn.selected { background: rgba(235,10,30,0.12); border-color: var(--accent); color: #FFFFFF; }
 
     /* Submit button */
@@ -97,12 +97,12 @@
     .success-banner.show { display: flex; align-items: center; gap: 10px; }
 
     /* Dropzone */
-    .dropzone { background:var(--bg); border:2px dashed var(--border); border-radius:var(--radius-sm); padding:32px 24px; text-align:center; cursor:pointer; transition:all 0.2s; }
+    .dropzone { background:var(--surface2); border:2px dashed var(--border); border-radius:var(--radius-sm); padding:32px 24px; text-align:center; cursor:pointer; transition:all 0.2s; }
     .dropzone:hover, .dropzone.drag-over { border-color:var(--accent2); background:rgba(190,255,140,0.04); }
     .drop-icon { font-size:2rem; margin-bottom:10px; opacity:0.5; }
     .drop-title { font-size:0.95rem; font-weight:600; color:var(--text); margin-bottom:4px; }
     .drop-sub { font-size:0.95rem; color:var(--muted); }
-    .file-item { display:flex; align-items:center; gap:10px; background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-sm); padding:9px 14px; }
+    .file-item { display:flex; align-items:center; gap:10px; background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius-sm); padding:9px 14px; }
     .file-item-icon { font-size:1rem; flex-shrink:0; }
     .file-item-name { font-size:0.95rem; color:var(--text); flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .file-item-size { font-size:0.95rem; color:var(--muted); flex-shrink:0; }
