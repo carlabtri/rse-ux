@@ -7,6 +7,30 @@
 <link rel="stylesheet" href="css/tri-ds.css">
   <link rel="stylesheet" href="css/case-study.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    .collapsible-trigger {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 0; background: none; border: none;
+      color: var(--text); font-size: 0.95rem; font-weight: 600;
+      font-family: inherit; cursor: pointer; text-align: left;
+    }
+    .collapsible-trigger .caret {
+      width: 10px; height: 6px; flex-shrink: 0;
+      background: #BEBEBE;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transition: transform 0.22s ease;
+    }
+    .collapsible-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
+    .collapsible-body {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+    .collapsible-body.open { grid-template-rows: 1fr; }
+    .collapsible-inner { overflow: hidden; min-height: 0; }
+    .collapsible-body.open .collapsible-inner { padding: 12px 0 16px; }
+    .cs-section:has(.collapsible-trigger) { margin-bottom: 20px; }
+    .cs-section:has(.collapsible-trigger) .cs-section-label { margin-bottom: 0; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
 
@@ -89,25 +113,30 @@
     <hr class="cs-divider"/>
 
     <div class="cs-section">
-      <div class="cs-section-label">Features</div>
-      <div style="display:flex; flex-direction:column; gap:20px;">
-        <div>
-          <h2>Welcome Page</h2>
-          <p>An introductory screen that presents instructions to orient users before the test begins.</p>
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Features</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <h2>Welcome Page</h2>
+            <p>An introductory screen that presents instructions to orient users before the test begins.</p>
+          </div>
+          <div>
+            <h2>Gradient Test</h2>
+            <p>Users are shown a color gradient and asked to identify the outlier — testing their ability to distinguish subtle hue variations within a controlled range.</p>
+          </div>
+          <div>
+            <h2>Practice Screens</h2>
+            <p>Four color squares labeled 1–4 are displayed side by side. Users identify the outlier using their keyboard, building familiarity with the test format before the scored session begins.</p>
+          </div>
+          <div>
+            <h2>Results &amp; Probability Plot</h2>
+            <p>At the end of the session, a probability plot is generated from the Bayesian sampling data — visualizing the user's color sensitivity threshold and how reliably they identified minor variations.</p>
+          </div>
         </div>
-        <div>
-          <h2>Gradient Test</h2>
-          <p>Users are shown a color gradient and asked to identify the outlier — testing their ability to distinguish subtle hue variations within a controlled range.</p>
-        </div>
-        <div>
-          <h2>Practice Screens</h2>
-          <p>Four color squares labeled 1–4 are displayed side by side. Users identify the outlier using their keyboard, building familiarity with the test format before the scored session begins.</p>
-        </div>
-        <div>
-          <h2>Results &amp; Probability Plot</h2>
-          <p>At the end of the session, a probability plot is generated from the Bayesian sampling data — visualizing the user's color sensitivity threshold and how reliably they identified minor variations.</p>
-        </div>
-      </div>
+      </div></div>
     </div>
 
     <hr class="cs-divider"/>
@@ -151,6 +180,7 @@
         <img src="assets/TableFilter.jpg" alt="Table Filter" onclick="openLightbox(this.src)">
         <img src="assets/PlotDetails.jpg" alt="Plot Details" onclick="openLightbox(this.src)">
         <img src="assets/ColorSelection.jpg" alt="Color Selection" onclick="openLightbox(this.src)">
+        <img src="assets/Color GradientDefault.png" alt="Color Gradient Default" onclick="openLightbox(this.src)">
       </div>
     </div>
 
@@ -209,6 +239,12 @@
       img.addEventListener('click', () => openLightbox(img.src));
     });
   });
+
+  function toggleCollapsible(btn) {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  }
 
   function showTab(id) {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
