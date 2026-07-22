@@ -28,7 +28,7 @@
     .cs-hero-inner { max-width:1200px; margin:0 auto; }
     .cs-hero-chips { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
     .cs-hero h1 { margin-bottom:14px; }
-    .cs-hero-desc { font-size:1rem; max-width:680px; margin-bottom:24px; }
+    .cs-hero-desc { font-size:1rem; max-width:680px; margin-bottom:24px; color:var(--text); }
     .cs-hero-links { display:flex; gap:10px; flex-wrap:wrap; }
     .btn { display:inline-flex; align-items:center; gap:7px; padding:9px 20px; border-radius:var(--radius-sm); font-size:0.95rem; font-weight:600; cursor:pointer; transition:all 0.2s; }
     .btn-primary { background:var(--accent); color:#fff; }
@@ -57,7 +57,7 @@
     .sidebar-chips { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:28px; }
 
     /* Tabs */
-    .tab-nav { display:flex; flex-direction:row; gap:0; border-bottom:1px solid var(--border); flex-shrink:0; padding-top:4px; }
+    .tab-nav { display:flex; flex-direction:row; gap:0; border-bottom:1px solid var(--border); flex-shrink:0; padding-top:4px; background:transparent; backdrop-filter:none; -webkit-backdrop-filter:none; position:static; z-index:auto; }
     .tab-btn { background:transparent; border:none; border-bottom:2px solid transparent; color:var(--muted); font-size:0.95rem; font-weight:500; padding:9px 16px; cursor:pointer; text-align:center; transition:all 0.18s; margin-bottom:-1px; white-space:nowrap; }
     .tab-btn:hover { color:var(--text); }
     .tab-btn.active { color:var(--text); font-weight:600; border-bottom:2px solid var(--accent); }

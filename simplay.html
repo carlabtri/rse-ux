@@ -28,7 +28,10 @@
     }
     .collapsible-body.open { grid-template-rows: 1fr; }
     .collapsible-inner { overflow: hidden; min-height: 0; }
-    .collapsible-body.open .collapsible-inner { padding: 16px 0 24px; }
+    .collapsible-body.open .collapsible-inner { padding: 12px 0 16px; }
+    /* Compact collapsible sections */
+    .cs-section:has(.collapsible-trigger) { margin-bottom: 20px; }
+    .cs-section:has(.collapsible-trigger) .cs-section-label { margin-bottom: 0; font-size: 0.85rem; }
   </style>
 </head>
 <body>
@@ -195,7 +198,7 @@
     <hr class="cs-divider"/>
 
     <div class="cs-section">
-      <div class="cs-section-label">Demo</div>
+      <div class="cs-section-label">Demos &amp; Prototypes</div>
       <video controls style="width:100%; border-radius:var(--radius); background:#000; display:block;">
         <source src="assets/SimPlay.mov" type="video/mp4">
         <source src="assets/SimPlay.mov" type="video/quicktime">
