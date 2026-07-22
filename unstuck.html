@@ -7,6 +7,30 @@
 <link rel="stylesheet" href="css/tri-ds.css">
   <link rel="stylesheet" href="css/case-study.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    .collapsible-trigger {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 0; background: none; border: none;
+      color: var(--text); font-size: 0.95rem; font-weight: 600;
+      font-family: inherit; cursor: pointer; text-align: left;
+    }
+    .collapsible-trigger .caret {
+      width: 10px; height: 6px; flex-shrink: 0;
+      background: #BEBEBE;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transition: transform 0.22s ease;
+    }
+    .collapsible-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
+    .collapsible-body {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+    .collapsible-body.open { grid-template-rows: 1fr; }
+    .collapsible-inner { overflow: hidden; min-height: 0; }
+    .collapsible-body.open .collapsible-inner { padding: 12px 0 16px; }
+    .cs-section:has(.collapsible-trigger) { margin-bottom: 20px; }
+    .cs-section:has(.collapsible-trigger) .cs-section-label { margin-bottom: 0; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
 
@@ -40,8 +64,20 @@
       </button>
     </nav>
 
-    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Overview</h3><p>Unstuck provides just-in-time interventions for creative professionals experiencing blocks — delivering contextual nudges and creative prompts at the right moment in the workflow.</p></div>
-<div class="tab-section"><h3>Context</h3><p>A browser-based application targeting creative professionals who benefit from external stimuli when stuck in ideation or problem-solving phases.</p></div></div>
+    <div id="pane-overview" class="tab-pane active">
+      <div class="tab-section">
+        <h3>Overview</h3>
+        <p>Unstuck provides just-in-time (JIT) interventions for creative professionals experiencing blocks — delivering contextual nudges and creative prompts at the right moment in the workflow to foster sustained behavioral change.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Behavioral Framework</h3>
+        <p>Grounded in a three-stage model: <strong style="color:var(--text);">Existing Awareness → Action &amp; Adaptation → Autonomy &amp; Habit</strong> — progressing from identifying behavioral insights, to developing models of behavior, to improving behavior with technology.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Research Scope</h3>
+        <p>A three-phase mixed-methods series: formative, longitudinal (S2: N&nbsp;=&nbsp;225 creative professionals over 5 weeks), and follow-up — evaluating how JIT interventions help professionals self-regulate creative stuckness over time.</p>
+      </div>
+    </div>
     <div id="pane-team" class="tab-pane"><div class="tab-section">
           <h3>Team</h3>
           <ul class="team-list">
@@ -72,6 +108,35 @@
         <div class="ph-icon" style="font-size:1.8rem">🖼️</div>
         <div class="ph-sub">unstuck4.jpg not found</div>
       </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Features</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <h2>Research Outcomes</h2>
+            <p>Evidence that micro-interventions improve creativity, wellbeing, and self-regulation across timescales — fostering sustained behavioral change in how creative professionals navigate stuckness.</p>
+          </div>
+          <div>
+            <h2>Theoretical Foundation</h2>
+            <p>A theoretically and empirically grounded definition of creative stuckness as a measurable, multifaceted psychological state — establishing a principled basis for intervention design and evaluation.</p>
+          </div>
+          <div>
+            <h2>Three-Phase Research Series</h2>
+            <p>A mixed-methods progression — formative, longitudinal (S2: N&nbsp;=&nbsp;225 creative professionals over 5 weeks), and follow-up — showing how professionals learn to regulate stuckness through JIT interventions over time.</p>
+          </div>
+          <div>
+            <h2>Ubiquitous Creativity Support</h2>
+            <p>A browser-based system designed to fit naturally into existing workflows — promoting autonomy and long-term adaptive regulation without disrupting the creative process.</p>
+          </div>
+        </div>
+      </div></div>
     </div>
 
     <hr class="cs-divider"/>
@@ -171,6 +236,12 @@
       img.addEventListener('click', () => openLightbox(img.src));
     });
   });
+
+  function toggleCollapsible(btn) {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  }
 
   function showTab(id) {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
