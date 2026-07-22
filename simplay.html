@@ -11,12 +11,10 @@
     .collapsible-section { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
     .collapsible-trigger {
       width: 100%; display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 20px; background: var(--surface); border: none;
+      padding: 0; background: none; border: none;
       color: var(--text); font-size: 0.95rem; font-weight: 600;
       font-family: inherit; cursor: pointer; text-align: left;
-      transition: background 0.18s;
     }
-    .collapsible-trigger:hover { background: var(--surface2); }
     .collapsible-trigger .caret {
       width: 7px; height: 4px; flex-shrink: 0;
       background: currentColor;
@@ -132,79 +130,61 @@
           <span class="deliverable-icon">✦</span>
           <div><div class="deliverable-title">Figma</div><div class="deliverable-sub">TRI_Simplay</div></div>
         </a>
-        <a href="https://tri-global.slack.com/channels/gaia-gps-app" target="_blank" class="deliverable-link">
-          <span class="deliverable-icon">💬</span>
-          <div><div class="deliverable-title">Slack</div><div class="deliverable-sub">#gaia-gps-app</div></div>
-        </a>
       </div>
     </div>
 
     <hr class="cs-divider"/>
 
     <div class="cs-section">
-      <div class="cs-section-label" style="margin-bottom:12px;">Features</div>
-      <div class="collapsible-section">
-        <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)">
-          Navigation Map <span class="caret"></span>
-        </button>
-        <div class="collapsible-body"><div class="collapsible-inner">
-          <p>A custom map based on the CARLA Simulator Town 15 layout, rendered as an SVG and updated in real time via ROS messages to reflect the car's current position and heading. Since the map doesn't exist in the real world, position data comes entirely from the simulator.</p>
-        </div></div>
-      </div>
-      <div class="collapsible-section" style="border-top:none;">
-        <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)">
-          Music Player <span class="caret"></span>
-        </button>
-        <div class="collapsible-body"><div class="collapsible-inner">
-          <p>A local music player that plays audio files stored on the device, surfacing familiar CarPlay-style media controls as a source of distraction during the drive.</p>
-        </div></div>
-      </div>
-      <div class="collapsible-section" style="border-top:none;">
-        <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)">
-          Notification Alerts <span class="caret"></span>
-        </button>
-        <div class="collapsible-body"><div class="collapsible-inner">
-          <p>Simulated incoming text message notifications that appear at scripted moments during the session, mimicking the kind of real-world phone interruptions the study is designed to test.</p>
-        </div></div>
-      </div>
-      <div class="collapsible-section" style="border-top:none;">
-        <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)">
-          Pre-Study Video <span class="caret"></span>
-        </button>
-        <div class="collapsible-body"><div class="collapsible-inner">
-          <p>Before the drive begins, participants watch a YouTube video — used to deliver study instructions or context directly within the app.</p>
-        </div></div>
-      </div>
-      <div class="collapsible-section" style="border-top:none;">
-        <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)">
-          Post-Study Survey <span class="caret"></span>
-        </button>
-        <div class="collapsible-body"><div class="collapsible-inner">
-          <p>At the end of the session, the app automatically forwards participants to an external survey URL to capture their self-reported experience.</p>
-        </div></div>
-      </div>
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Features</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner" style="padding:16px 0 0;">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <h2>Navigation Map</h2>
+            <p>A custom map based on the CARLA Simulator Town 15 layout, rendered as an SVG and updated in real time via ROS messages to reflect the car's current position and heading. Since the map doesn't exist in the real world, position data comes entirely from the simulator.</p>
+          </div>
+          <div>
+            <h2>Music Player</h2>
+            <p>A local music player that plays audio files stored on the device, surfacing familiar CarPlay-style media controls as a source of distraction during the drive.</p>
+          </div>
+          <div>
+            <h2>Notification Alerts</h2>
+            <p>Simulated incoming text message notifications that appear at scripted moments during the session, mimicking the kind of real-world phone interruptions the study is designed to test.</p>
+          </div>
+          <div>
+            <h2>Pre-Study Video</h2>
+            <p>Before the drive begins, participants watch a YouTube video — used to deliver study instructions or context directly within the app.</p>
+          </div>
+          <div>
+            <h2>Post-Study Survey</h2>
+            <p>At the end of the session, the app automatically forwards participants to an external survey URL to capture their self-reported experience.</p>
+          </div>
+        </div>
+      </div></div>
     </div>
 
     <hr class="cs-divider"/>
 
     <div class="cs-section">
-      <div class="cs-section-label" style="margin-bottom:12px;">Map Requirements</div>
-      <div class="collapsible-section">
-        <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)">
-          CARLA Town 15 <span class="caret"></span>
-        </button>
-        <div class="collapsible-body"><div class="collapsible-inner">
-          <p>The map is dynamically drawn from <a href="https://carla.readthedocs.io/en/0.9.15/map_town15/" target="_blank" style="color:var(--accent2); text-decoration:none;">CARLA Simulator Town 15</a> — a fictional environment that doesn't correspond to any real-world location. The road network is exported as an SVG and rendered within the app, with manual updates applied as the study evolves.</p>
-        </div></div>
-      </div>
-      <div class="collapsible-section" style="border-top:none;">
-        <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)">
-          ROS Integration <span class="caret"></span>
-        </button>
-        <div class="collapsible-body"><div class="collapsible-inner">
-          <p>The car's position on the map and the map's heading/orientation are updated in real time via ROS (Robot Operating System) messages published by the driving simulator. This keeps the on-screen navigation in sync with where the participant is virtually driving.</p>
-        </div></div>
-      </div>
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Map Requirements</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner" style="padding:16px 0 0;">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <h2>CARLA Town 15</h2>
+            <p>The map is dynamically drawn from <a href="https://carla.readthedocs.io/en/0.9.15/map_town15/" target="_blank" style="color:var(--accent2); text-decoration:none;">CARLA Simulator Town 15</a> — a fictional environment that doesn't correspond to any real-world location. The road network is exported as an SVG and rendered within the app, with manual updates applied as the study evolves.</p>
+          </div>
+          <div>
+            <h2>ROS Integration</h2>
+            <p>The car's position on the map and the map's heading/orientation are updated in real time via ROS (Robot Operating System) messages published by the driving simulator. This keeps the on-screen navigation in sync with where the participant is virtually driving.</p>
+          </div>
+        </div>
+      </div></div>
     </div>
 
     <hr class="cs-divider"/>
