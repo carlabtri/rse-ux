@@ -79,6 +79,7 @@
     .badge-type { background: rgba(190,255,140,0.12); color: #BEFF8C; }
     .badge-done { background: rgba(52,211,153,0.12); color: #34d399; }
     .badge-review { background: rgba(251,191,36,0.12); color: #fbbf24; }
+    .badge-active { background: rgba(56,189,248,0.14); color: #38bdf8; }
     .badge-open { background: rgba(148,163,184,0.12); color: #94a3b8; }
     .badge-jira { background: rgba(180,239,255,0.12); color: #B4EFFF; }
     .badge-collab { background: rgba(235,10,30,0.22); color: #FFFFFF; }
