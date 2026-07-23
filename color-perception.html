@@ -71,7 +71,11 @@
       </div>
       <div class="tab-section">
         <h3>Goal</h3>
-        <p>Enable TRI researchers to test individual hue sensitivity so they can understand how accurately participants perceive slight differences between colors.</p>
+        <p>Enable TRI researchers to measure individual hue sensitivity for automotive paint color quality control — understanding how accurately participants perceive slight color differences between car parts assembled in different locations.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Research Context</h3>
+        <p>Cars are assembled in different places, resulting in slight variation in paint colors between parts. The goal is for the car to look as if all parts were painted together — but color perception is non-linear and subjective, making this harder to evaluate than it appears.</p>
       </div>
     </div>
     <div id="pane-team" class="tab-pane"><div class="tab-section">
@@ -93,10 +97,10 @@
 
     <!-- Banner -->
     <div class="cs-banner">
-      <img src="assets/GradientTest.jpg" alt="Color Perception Tool" style="width:100%;height:220px;object-fit:cover;object-position:top;border-radius:var(--radius);display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <img src="assets/CPT-cover.png" alt="Color Perception Tool" style="width:100%;height:220px;object-fit:cover;object-position:center;border-radius:var(--radius);display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
       <div class="media-placeholder banner-ph" style="display:none;">
         <div class="ph-icon" style="font-size:1.8rem">🖼️</div>
-        <div class="ph-sub">GradientTest.jpg not found</div>
+        <div class="ph-sub">CPT-cover.png not found</div>
       </div>
     </div>
 
@@ -135,6 +139,63 @@
               <li>Page loading states</li>
             </ul>
           </div>
+        </div>
+      </div></div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Research Background</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner">
+        <div style="display:flex; flex-direction:column; gap:24px;">
+
+          <div>
+            <h2>Color Matching for Automotive Paint</h2>
+            <p>Automotive vehicles are assembled across multiple facilities, resulting in subtle paint color variation between parts. The expectation is that the car looks as if all parts were painted together — yet matching colors numerically does not guarantee they will appear identical to the human eye.</p>
+            <p style="margin-top:8px;color:var(--muted);font-size:0.9rem;">Color perception is non-linear and subjective. Research by Witzel &amp; Gegenfurtner (2013) shows that hue sensitivity thresholds vary significantly across the color spectrum and between individuals — making it difficult to define a single numerical tolerance for "acceptable" color match.</p>
+          </div>
+
+          <!-- Test flow diagram -->
+          <div>
+            <h2>Test Protocol</h2>
+            <p style="margin-bottom:14px;">The tool runs participants through three stages, using Bayesian sampling to adaptively home in on each individual's sensitivity threshold:</p>
+            <svg viewBox="0 0 660 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:660px;display:block;border-radius:10px;margin-bottom:10px;">
+              <defs>
+                <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#EB0A1E"/>
+                </marker>
+              </defs>
+              <!-- Stage 1 -->
+              <rect x="8" y="16" width="168" height="98" rx="10" fill="#1f2a10" stroke="#BEFF8C" stroke-width="1.5"/>
+              <text x="92" y="44" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" fill="#BEFF8C">Gradient Test</text>
+              <text x="92" y="62" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">User sets starting</text>
+              <text x="92" y="76" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">sensitivity range on</text>
+              <text x="92" y="90" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">a color gradient</text>
+              <!-- Arrow 1 -->
+              <line x1="177" y1="65" x2="228" y2="65" stroke="#EB0A1E" stroke-width="2" marker-end="url(#arr)"/>
+              <text x="202" y="58" text-anchor="middle" font-family="inherit" font-size="9" fill="#BEBEBE">→</text>
+              <!-- Stage 2 -->
+              <rect x="230" y="16" width="196" height="98" rx="10" fill="#1f1010" stroke="#EB0A1E" stroke-width="1.5"/>
+              <text x="328" y="44" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" fill="#EB0A1E">4-Alternative Forced Choice</text>
+              <text x="328" y="62" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">Pick the outlier from</text>
+              <text x="328" y="76" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">4 color squares</text>
+              <text x="328" y="90" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">50–200 reps · 20 min max</text>
+              <!-- Arrow 2 -->
+              <line x1="427" y1="65" x2="478" y2="65" stroke="#EB0A1E" stroke-width="2" marker-end="url(#arr)"/>
+              <!-- Stage 3 -->
+              <rect x="480" y="16" width="172" height="98" rx="10" fill="#101520" stroke="#5ba3d6" stroke-width="1.5"/>
+              <text x="566" y="44" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" fill="#5ba3d6">Results</text>
+              <text x="566" y="62" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">Probability plot of</text>
+              <text x="566" y="76" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">individual colour</text>
+              <text x="566" y="90" text-anchor="middle" font-family="inherit" font-size="10" fill="#BEBEBE">sensitivity profile</text>
+            </svg>
+            <p style="color:var(--muted);font-size:0.85rem;">Each participant's results produce a unique judgment profile — visualizing how sensitive they are to hue shifts across different base colors (black, grey, dark red, gold, teal).</p>
+          </div>
+
         </div>
       </div></div>
     </div>
