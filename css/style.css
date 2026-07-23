@@ -75,7 +75,7 @@
     .projects-grid.list-view .card-body { padding: 16px 20px; }
     .projects-grid.list-view .card-desc { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
-    .badge { font-size: 0.95rem; font-weight: 600; padding: 3px 10px; border-radius: 99px; letter-spacing: 0.04em; }
+    .badge { font-size: 0.7rem; font-weight: 600; padding: 2px 7px; border-radius: 99px; letter-spacing: 0.04em; }
     .badge-type { background: rgba(190,255,140,0.12); color: #BEFF8C; }
     .badge-done { background: rgba(52,211,153,0.12); color: #34d399; }
     .badge-review { background: rgba(251,191,36,0.12); color: #fbbf24; }
