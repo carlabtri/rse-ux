@@ -7,6 +7,30 @@
 <link rel="stylesheet" href="css/tri-ds.css">
   <link rel="stylesheet" href="css/case-study.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    .collapsible-trigger {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 0; background: none; border: none;
+      color: var(--text); font-size: 0.95rem; font-weight: 600;
+      font-family: inherit; cursor: pointer; text-align: left;
+    }
+    .collapsible-trigger .caret {
+      width: 10px; height: 6px; flex-shrink: 0;
+      background: #BEBEBE;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transition: transform 0.22s ease;
+    }
+    .collapsible-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
+    .collapsible-body {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+    .collapsible-body.open { grid-template-rows: 1fr; }
+    .collapsible-inner { overflow: hidden; min-height: 0; }
+    .collapsible-body.open .collapsible-inner { padding: 12px 0 16px; }
+    .cs-section:has(.collapsible-trigger) { margin-bottom: 20px; }
+    .cs-section:has(.collapsible-trigger) .cs-section-label { margin-bottom: 0; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
 
@@ -22,7 +46,7 @@
     <div class="cs-hero-chips"><span class="badge badge-type">AI Tools</span><span class="badge badge-done">Completed</span><span class="badge badge-jira">TRI-45351</span></div>
     <h1>Ops Chatbot</h1>
     <p class="cs-hero-desc">An internal AI-powered tool allowing users to select between three underlying LLMs for day-to-day tasks, spanning an evaluation dashboard and a voice-enabled mobile interface.</p>
-    <div class="cs-hero-links"><a class="btn btn-primary" href="#" onclick="event.preventDefault();openVideoModal()">▶ Demo</a><a class="btn btn-outline" href="#">✦ Figma</a><a class="btn btn-outline" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-45351" target="_blank">⬡ Jira Epic</a></div>
+    <div class="cs-hero-links"><a class="btn btn-primary" href="#" onclick="event.preventDefault();openVideoModal()">▶ Demo</a><a class="btn btn-outline" href="https://ops-chatbot.tri.global/" target="_blank">↗ Live App</a><a class="btn btn-outline" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-45351" target="_blank">⬡ Jira Epic</a></div>
   </div>
 </div>
 
@@ -40,9 +64,16 @@
       </button>
     </nav>
 
-    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Part 1 — Chatbot Interface</h3><p>AI-powered chatbot integrated into TRI's intranet.</p></div>
-<div class="tab-section"><h3>Part 2 — Evaluation Tool</h3><p>Full UI for an internal LLM evaluation platform enabling TRI researchers to evaluate, compare, and analyze language model outputs through a structured dashboard and thread-detail view.</p></div>
-<div class="tab-section"><h3>Key Feature</h3><p>Users can switch between three underlying LLMs — the UX needed to make this selection clear, contextual, and non-disruptive to the workflow.</p></div></div>
+    <div id="pane-overview" class="tab-pane active">
+      <div class="tab-section">
+        <h3>Overview</h3>
+        <p>An AI-powered assistant providing TRI employees with instant access to information from the company intranet — using natural language queries, role-based access control, and real-time response generation.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Research Context</h3>
+        <p>The system uses automated web scraping to collect TRI intranet content, AWS services for storage and AI processing, and a web interface for user interactions. Supports continuous learning and updates as intranet content evolves.</p>
+      </div>
+    </div>
     <div id="pane-team" class="tab-pane"><div class="tab-section">
           <h3>Team</h3>
           <ul class="team-list">
@@ -64,7 +95,43 @@
 
     <!-- Banner -->
     <div class="cs-banner">
-      <img src="assets/LLM_Dashboard.jpg" alt="LLM Dashboard" style="width:100%;border-radius:var(--radius);object-fit:cover;max-height:340px;object-position:top;" onerror="this.parentElement.innerHTML='<div class=&quot;media-placeholder banner-ph&quot;><div class=&quot;ph-icon&quot; style=&quot;font-size:1.8rem&quot;>🖼️</div><div class=&quot;ph-sub&quot;>LLM_Dashboard.jpg not found</div></div>'">
+      <img src="assets/LLM_Dashboard.jpg" alt="LLM Dashboard" style="width:100%;height:220px;border-radius:var(--radius);object-fit:cover;object-position:top;display:block;" onerror="this.parentElement.innerHTML='<div class=&quot;media-placeholder banner-ph&quot;><div class=&quot;ph-icon&quot; style=&quot;font-size:1.8rem&quot;>🖼️</div><div class=&quot;ph-sub&quot;>LLM_Dashboard.jpg not found</div></div>'">
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Features &amp; Functionality</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <h2>Part 1 — Chatbot Interface</h2>
+            <p>A clean, modern chat interface integrated into TRI's intranet, optimized for both desktop and mobile. Employees can ask questions in plain language and receive instant, contextually relevant answers drawn from internal resources.</p>
+            <ul style="margin-top:10px;">
+              <li>Real-time responses with session continuity</li>
+              <li>Responsive layout across all device types</li>
+              <li>Graceful error handling for connectivity or processing issues</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Part 2 — LLM Evaluation Tool</h2>
+            <p>A full UI for an internal LLM evaluation platform enabling TRI researchers to evaluate, compare, and analyze language model outputs through a structured dashboard and thread-detail view. Users can switch between three underlying LLMs — the UX makes this selection clear, contextual, and non-disruptive to the workflow.</p>
+          </div>
+          <div>
+            <h2>Core System Features</h2>
+            <ul>
+              <li>Automated web scraping of TRI intranet content</li>
+              <li>Natural language query processing</li>
+              <li>Role-based access control</li>
+              <li>Real-time response generation</li>
+              <li>Continuous learning and content updates</li>
+            </ul>
+          </div>
+        </div>
+      </div></div>
     </div>
 
     <hr class="cs-divider"/>
@@ -194,6 +261,12 @@
       img.addEventListener('click', () => openLightbox(img.src));
     });
   });
+
+  function toggleCollapsible(btn) {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  }
 
   function showTab(id) {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
