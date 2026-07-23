@@ -7,6 +7,30 @@
 <link rel="stylesheet" href="css/tri-ds.css">
   <link rel="stylesheet" href="css/case-study.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    .collapsible-trigger {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 0; background: none; border: none;
+      color: var(--text); font-size: 0.95rem; font-weight: 600;
+      font-family: inherit; cursor: pointer; text-align: left;
+    }
+    .collapsible-trigger .caret {
+      width: 10px; height: 6px; flex-shrink: 0;
+      background: #BEBEBE;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transition: transform 0.22s ease;
+    }
+    .collapsible-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
+    .collapsible-body {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+    .collapsible-body.open { grid-template-rows: 1fr; }
+    .collapsible-inner { overflow: hidden; min-height: 0; }
+    .collapsible-body.open .collapsible-inner { padding: 12px 0 16px; }
+    .cs-section:has(.collapsible-trigger) { margin-bottom: 20px; }
+    .cs-section:has(.collapsible-trigger) .cs-section-label { margin-bottom: 0; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
 
@@ -21,7 +45,7 @@
   <div class="cs-hero-inner">
     <div class="cs-hero-chips"><span class="badge badge-type">Web App</span><span class="badge badge-review">In Review</span><span class="badge badge-jira">TRI-50282</span></div>
     <h1>Whyzen</h1>
-    <p class="cs-hero-desc">A graphical UI for the E&M AMDD team to create, save, load, and analyze graphical models using a node-based graph editor with iterative UX improvements.</p>
+    <p class="cs-hero-desc">A graphical user interface for Energy &amp; Material's Accelerated Materials Design and Discovery (AMDD) team to create, save, load, and analyze graphical models — using a node-based graph editor for building and visualizing mechanism models.</p>
     <div class="cs-hero-links"><a class="btn btn-primary" href="https://stage.whyzen.matr.io/" target="_blank">▶ Demo</a><a class="btn btn-outline" href="https://www.figma.com/design/Q1BEDeCuy7Jp4yTFCZa2U6/Whyzen-mock-design?node-id=93-197&t=FVS41KhqIz8kJK2v-1" target="_blank">✦ Figma</a><a class="btn btn-outline" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-50282" target="_blank">⬡ Jira Epic</a></div>
   </div>
 </div>
@@ -40,9 +64,24 @@
       </button>
     </nav>
 
-    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Overview</h3><p>A graphical user interface for E&amp;M's AMDD team to create, save, load, and analyze graphical models — using a node-based graph editor for building and visualizing mechanism models.</p></div>
-<div class="tab-section"><h3>Challenge</h3><p>The tool is used by engineers, not designers. The graph interface needed to be powerful and precise while remaining discoverable and efficient for non-UX users.</p></div>
-<div class="tab-section"><h3>Approach</h3><ul><li>Multiple iterative design sprints</li><li>Focused on discoverability and interaction clarity</li><li>Close collaboration with engineering on feasibility</li></ul></div></div>
+    <div id="pane-overview" class="tab-pane active">
+      <div class="tab-section">
+        <h3>Overview</h3>
+        <p>A graphical user interface for the E&amp;M AMDD team to create, save, load, and analyze graph-theory based models — using a node-based graph editor that interfaces with TRI-AMDD's existing ML codebase for training.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Goals</h3>
+        <p>Serves as a prototype for a causal modeling tool that enables non-AI/ML subject matter experts to integrate their domain expertise with fully interpretable and explainable graphical models. These models offer more robust and safer causal reasoning than LLMs or correlative feature analyses, and can extrapolate to unseen domains more effectively than purely data-driven methods.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Approach</h3>
+        <ul>
+          <li>Multiple iterative design sprints</li>
+          <li>Focused on discoverability and interaction clarity</li>
+          <li>Close collaboration with engineering on feasibility</li>
+        </ul>
+      </div>
+    </div>
     <div id="pane-team" class="tab-pane"><div class="tab-section">
           <h3>Team</h3>
           <ul class="team-list">
@@ -82,6 +121,35 @@
     <hr class="cs-divider"/>
 
     <div class="cs-section">
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Features &amp; Functionality</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <h2>Model Creation &amp; Editing</h2>
+            <p>A node-based graph editor for quickly creating, visualizing, modifying, and studying graph-theory based mechanism models. Designed to be powerful and precise while remaining discoverable for non-UX engineers.</p>
+          </div>
+          <div>
+            <h2>Save &amp; Load</h2>
+            <p>Saving and loading interfaces directly with <a href="https://github.com/TRI-AMDD/Whyzen" target="_blank" style="color:var(--accent2);text-decoration:underline;">TRI-AMDD's existing ML codebase</a>, enabling seamless integration between the visual editor and the training pipeline.</p>
+          </div>
+          <div>
+            <h2>Analysis</h2>
+            <p>Tools to analyze graphical models and explore their causal structures — supporting the team's goal of building interpretable, explainable models that reason causally rather than correlationally.</p>
+          </div>
+          <div>
+            <h2>Causal Reasoning</h2>
+            <p>Unlike LLMs or correlative feature analyses, the causal models built with Whyzen offer more robust and safer reasoning capabilities — and can extrapolate to unseen domains more effectively than purely data-driven methods.</p>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
       <div class="cs-section-label">Links</div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
         <a class="deliverable-link" href="https://www.figma.com/design/Q1BEDeCuy7Jp4yTFCZa2U6/Whyzen-mock-design?node-id=93-197&t=FVS41KhqIz8kJK2v-1" target="_blank">
@@ -95,6 +163,10 @@
         <a class="deliverable-link" href="https://stage.whyzen.matr.io/" target="_blank">
           <span class="deliverable-icon">▶</span>
           <div><div class="deliverable-title">Live Staging Environment</div><div class="deliverable-sub">stage.whyzen.matr.io</div></div>
+        </a>
+        <a class="deliverable-link" href="https://toyotaresearchinstitute.atlassian.net/wiki/spaces/RSE/pages/3788701698/Whyzen+App+-+Version+1.0" target="_blank">
+          <span class="deliverable-icon">📄</span>
+          <div><div class="deliverable-title">Whyzen App — Version 1.0 Requirements</div><div class="deliverable-sub">Confluence · Feature requirements · Scope</div></div>
         </a>
         <a class="deliverable-link" href="https://toyotaresearchinstitute.atlassian.net/browse/TRI-50282" target="_blank">
           <span class="deliverable-icon">⬡</span>
@@ -168,6 +240,12 @@
       img.addEventListener('click', () => openLightbox(img.src));
     });
   });
+
+  function toggleCollapsible(btn) {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  }
 
   function showTab(id) {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
