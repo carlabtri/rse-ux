@@ -7,6 +7,30 @@
 <link rel="stylesheet" href="css/tri-ds.css">
   <link rel="stylesheet" href="css/case-study.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    .collapsible-trigger {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 0; background: none; border: none;
+      color: var(--text); font-size: 0.95rem; font-weight: 600;
+      font-family: inherit; cursor: pointer; text-align: left;
+    }
+    .collapsible-trigger .caret {
+      width: 10px; height: 6px; flex-shrink: 0;
+      background: #BEBEBE;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transition: transform 0.22s ease;
+    }
+    .collapsible-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
+    .collapsible-body {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+    .collapsible-body.open { grid-template-rows: 1fr; }
+    .collapsible-inner { overflow: hidden; min-height: 0; }
+    .collapsible-body.open .collapsible-inner { padding: 12px 0 16px; }
+    .cs-section:has(.collapsible-trigger) { margin-bottom: 20px; }
+    .cs-section:has(.collapsible-trigger) .cs-section-label { margin-bottom: 0; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
 
@@ -45,22 +69,23 @@
       </button>
     </nav>
 
-    <div id="pane-overview" class="tab-pane active"><div class="tab-section"><h3>Overview</h3><p>An optional program designed for Toyota employees and customers, providing customized control over data sharing and how it is used by Toyota — while unlocking real-world data for research and development.</p></div>
-<div class="tab-section"><h3>Key Features</h3><ul><li>Customized control over data sharing and usage</li><li>Unlocks real-world driving data for R&amp;D</li><li>Transparent opt-in/opt-out experience</li></ul></div></div>
+    <div id="pane-overview" class="tab-pane active">
+      <div class="tab-section">
+        <h3>Overview</h3>
+        <p>An optional program for Toyota employees and customers offering customized control over data sharing and unlocking real-world data for research and development.</p>
+      </div>
+      <div class="tab-section">
+        <h3>What is Toyota SWARM?</h3>
+        <p>Toyota's annual, global hackathon (since 2019) to design, build, and pitch technology ideas. 53 teams from over a dozen global Toyota regions compete in a 72-hour competition in Plano, TX, across 3 judging rounds.</p>
+      </div>
+    </div>
     <div id="pane-team" class="tab-pane"><div class="tab-section">
           <h3>Team</h3>
           <ul class="team-list">
             <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:d99b0a71-c9b3-48ae-8be6-e07f9f7895a6" target="_blank">Carla Bellido</a><span class="team-role">UX Designer · Contractor</span></li>
-            <li><span class="team-name">Chi Zhang</span><span class="team-role">Research Scientist 4</span></li>
             <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/5c9454eed30a312d4a176eed" target="_blank">David Berkowitz</a><span class="team-role">Director, Research Software Engineering</span></li>
-            <li><span class="team-name">Dule Shu</span><span class="team-role">Research Scientist 4</span></li>
-            <li><span class="team-name">Eric Warheit</span><span class="team-role"></span></li>
-            <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/60cba30d8f2cc100694d6a06" target="_blank">Guy Rosman</a><span class="team-role">Senior Manager, Human Aware Interaction & Learning</span></li>
             <li><span class="team-name">Jaysen Rajkomar</span><span class="team-role">Senior Manager, Associate General Counsel</span></li>
-            <li><span class="team-name">Kalani Murakami</span><span class="team-role">Senior Software Engineer</span></li>
             <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:12efa1b5-de08-48c7-9158-5ea479d76cb0" target="_blank">Kechun Liu</a><span class="team-role">Research Scientist 4</span></li>
-            <li><span class="team-name">Laura Libby</span><span class="team-role">Sr. Manager, Adaptive Behavior Systems</span></li>
-            <li><span class="team-name">Peter Richmond</span><span class="team-role">Senior Director, Technical Engineering & Operations</span></li>
             <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:f1ada0d4-2472-48a2-b1a1-3c9775873c13" target="_blank">Russell Freeman</a><span class="team-role">Engineer</span></li>
             <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/70121:fb25f8be-8283-47f8-a282-d73a21ea6543" target="_blank">Satya Kotari</a><span class="team-role">Senior Staff Technical Lead, Infrastructure Engineering</span></li>
             <li><a class="team-name" href="https://toyotaresearchinstitute.atlassian.net/jira/people/712020:1fb553d6-ead2-438a-ae0b-9075b75e43e7" target="_blank">Todd Osborne</a><span class="team-role">Senior Manager, Data Program</span></li>
@@ -78,6 +103,62 @@
       <div class="media-placeholder banner-ph" style="display:none;">
         <div class="ph-icon" style="font-size:1.8rem">🖼️</div>
         <div class="ph-sub">TRPHome.jpg not found</div>
+      </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <button class="collapsible-trigger" aria-expanded="false" onclick="toggleCollapsible(this)" style="padding:0; background:none; margin-bottom:4px;">
+        <div class="cs-section-label" style="margin-bottom:0;">Features &amp; Functionality</div>
+        <span class="caret"></span>
+      </button>
+      <div class="collapsible-body"><div class="collapsible-inner">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <h2>Toyota Research Program</h2>
+            <p>Nothing required to enter. By opting in, participants can selectively share data Toyota already has for additional R&amp;D uses — giving researchers access to real-world driving data while keeping participants in full control of what they share.</p>
+          </div>
+          <div>
+            <h2>Dashcam</h2>
+            <p>Participants receive a dashcam in the mail to mount in their vehicle. The device captures and transmits driving video, enabling richer behavioral and environmental data collection for Toyota's research programs.</p>
+          </div>
+          <div>
+            <h2>Offboarding</h2>
+            <p>Participants can leave the program at any time. Upon exit, their data is removed from all research datasets — ensuring a transparent and fully reversible opt-in experience.</p>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <div class="cs-section">
+      <div class="cs-section-label">Customer Experience Opportunities</div>
+      <div style="margin-top:8px;">
+        <p style="color:var(--muted);font-size:0.9rem;margin-bottom:14px;">Examples of how real-world data from this program could improve Toyota products and services:</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:baseline;gap:10px;">
+            <span style="color:var(--accent);font-size:0.8rem;font-weight:700;flex-shrink:0;">PLANNED</span>
+            <span>Driver Impairment and Assistance Models</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:10px;">
+            <span style="color:var(--accent);font-size:0.8rem;font-weight:700;flex-shrink:0;">PLANNED</span>
+            <span>Driver Sensei</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:10px;">
+            <span style="color:var(--accent);font-size:0.8rem;font-weight:700;flex-shrink:0;">PLANNED</span>
+            <span>Personalized Trajectory Modeling</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:10px;">
+            <span style="color:var(--accent2);font-size:0.8rem;font-weight:700;flex-shrink:0;">POSSIBLE</span>
+            <span>Personalized Energy Efficiency Optimization</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:10px;">
+            <span style="color:var(--accent2);font-size:0.8rem;font-weight:700;flex-shrink:0;">POSSIBLE</span>
+            <span>Joint Driver-Vehicle Modeling</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -196,6 +277,12 @@
       img.addEventListener('click', () => openLightbox(img.src));
     });
   });
+
+  function toggleCollapsible(btn) {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.nextElementSibling.classList.toggle('open', !expanded);
+  }
 
   function showTab(id) {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
